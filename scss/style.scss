@@ -11,7 +11,7 @@
     box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.16);
 
     &.fixed {
-        position: sticky;
+        position: fixed;
         top: 0;
         right: 0;
         left: 0;
@@ -170,7 +170,6 @@
 /* Main
 ===================*/
 .main {
-    padding: 2rem 0;
 
     &__h1 {
         max-width: 980px;
@@ -670,8 +669,6 @@
 ===================*/
 .resources {
 
-    &__container {}
-
     &__content {
         display: flex;
         justify-content: space-between;
@@ -1034,8 +1031,6 @@
     &__name {
         margin-right: 0.7rem;
     }
-
-    &__arrow {}
 }
 
 .courses {
@@ -1057,7 +1052,7 @@
     cursor: pointer;
     margin-top: 4rem;
 
-    @media(max-width: $laptop-lg) {
+    @media(max-width: 940px) {
         flex-basis: 48%;
     }
 
@@ -1130,8 +1125,12 @@
         font-weight: 600;
         text-transform: uppercase;
 
-        @media(max-width: $tablet) {
+        @media(max-width: $laptop) {
             font-size: 2.7rem;
+        }
+
+        @media(max-width: 980px) {
+            font-size: 2.4rem;
         }
     }
 
@@ -1166,4 +1165,1104 @@
     &__detail {
         font-size: 2rem;
     }
+}
+
+.course-card {
+    cursor: pointer;
+    margin: 4rem;
+
+    &:hover .course-card__wrapper img {
+        filter: none;
+    }
+
+    &__wrapper {
+        position: relative;
+
+
+        img {
+            width: 100%;
+            display: block;
+            height: auto;
+            filter: blur(3px);
+            transition: filter .3s linear;
+        }
+    }
+
+    // .courses-card__content
+
+    &__content {
+        position: absolute;
+        height: 100%;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 2;
+        color: $white;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    // .courses-card__header
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    // .courses-card__date
+
+    &__date {
+        text-align: center;
+
+        span {
+            display: block;
+        }
+    }
+
+    // .courses-card__type
+
+    &__type {
+        text-transform: capitalize;
+    }
+
+    // .courses-card__name
+
+    &__name {
+        margin-top: 2rem;
+        font-size: 3.2rem;
+        font-weight: 600;
+        text-transform: uppercase;
+
+        @media(max-width: $laptop) {
+            font-size: 2.7rem;
+        }
+
+        @media(max-width: 980px) {
+            font-size: 2.4rem;
+        }
+    }
+
+    // .courses-card__body
+
+    &__body {
+        background-color: rgba(0, 187, 246, 0.24);
+        padding: 1.4rem;
+    }
+
+    // .courses-card__info
+
+    &__info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    // .courses-card__icon
+
+    &__icon {
+        margin-right: 1rem;
+
+        img {
+            width: 20px;
+            filter: none;
+        }
+    }
+
+    // .courses-card__detail
+
+    &__detail {
+        font-size: 2rem;
+    }
+}
+
+.popular-card {
+    cursor: pointer;
+
+    &:hover .popular-card__wrapper img {
+        filter: none;
+    }
+
+    &__wrapper {
+        position: relative;
+
+
+        img {
+            width: 100%;
+            display: block;
+            height: auto;
+            filter: blur(3px);
+            transition: filter .3s linear;
+        }
+    }
+
+    // .courses-card__content
+
+    &__content {
+        position: absolute;
+        height: 100%;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 2;
+        color: $white;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    // .courses-card__header
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    // .courses-card__date
+
+    &__date {
+        text-align: center;
+
+        span {
+            display: block;
+        }
+    }
+
+    // .courses-card__type
+
+    &__type {
+        text-transform: capitalize;
+    }
+
+    // .courses-card__name
+
+    &__name {
+        margin-top: 2rem;
+        font-size: 3.2rem;
+        font-weight: 600;
+        text-transform: uppercase;
+
+        @media(max-width: $laptop) {
+            font-size: 2.7rem;
+        }
+
+        @media(max-width: 980px) {
+            font-size: 2.4rem;
+        }
+    }
+
+    // .courses-card__body
+
+    &__body {
+        background-color: rgba(0, 187, 246, 0.24);
+        padding: 1.4rem;
+    }
+
+    // .courses-card__info
+
+    &__info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    // .courses-card__icon
+
+    &__icon {
+        margin-right: 1rem;
+
+        img {
+            width: 20px;
+            filter: none;
+        }
+    }
+
+    // .courses-card__detail
+
+    &__detail {
+        font-size: 2rem;
+    }
+}
+
+/* Course
+===================*/
+.course {
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+.course-sidebar {
+    flex-basis: 25%;
+    padding-top: 6rem;
+}
+
+
+.course-main {
+    flex-basis: 70%;
+
+    &__rating {
+        display: flex;
+        align-items: center;
+        margin: 2rem 0;
+    }
+
+
+    &__rate {
+        color: $alert;
+        margin-right: 3rem;
+    }
+
+
+    &__stars {
+        display: flex;
+    }
+
+    // .course-main__star
+
+    &__star {
+        margin-right: 0.3rem;
+    }
+
+    // .course-main__img
+
+    &__img {
+        border-radius: 1rem;
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 1rem;
+        }
+    }
+
+    // .course-main__title
+
+    &__title {
+        display: flex;
+        align-items: center;
+
+        .btn {
+            color: $white;
+            margin-left: 4rem;
+
+            span {
+                margin-left: 1rem;
+            }
+        }
+    }
+
+    // .course-main__name
+
+    &__name {
+        font-family: $poppins;
+        font-weight: 600;
+        font-size: 5.2rem;
+        margin: 2rem 0;
+    }
+
+    &__text {
+        margin: 2rem 0;
+    }
+
+    &__btn {
+        margin: 2rem 0;
+
+        .btn {
+            max-width: 190px;
+            font-size: 4.8rem;
+        }
+    }
+
+    &__item {
+        display: flex;
+        margin-top: 2rem;
+    }
+
+    &__list {
+        margin-top: 4rem;
+        padding: 2rem 0;
+        border-top: 1px solid #ABABAB;
+        border-bottom: 1px solid #ABABAB;
+    }
+
+    &__desc {
+        margin-left: 2rem;
+        font-size: 2.4rem;
+        font-family: $poppins;
+
+    }
+
+    &__h4 {
+        font-size: 3.6rem;
+        font-family: $poppins;
+        font-weight: 500;
+        margin-left: 4.8rem;
+    }
+
+    &__more {
+        margin: 2rem 0;
+    }
+
+    &__includes {
+        border-bottom: 1px solid #ABABAB;
+        padding: 3rem 0;
+    }
+
+    &__group {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-basis: 48%;
+        margin-top: 1rem;
+    }
+
+    &__priority {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__icons {
+        flex-basis: 10%;
+    }
+
+    &__heading {
+        flex-basis: 85%;
+    }
+
+    &__start {
+        margin: 2rem 0;
+    }
+}
+
+/* Hero
+===================*/
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    padding: 0;
+    background: url('../img/main/hero-bg.png') no-repeat center;
+    background-size: cover;
+
+    &__container {
+        .scroll-more {
+            margin-left: 3rem;
+        }
+    }
+
+    // .hero__content
+
+    &__content {
+        background: url('../img/main/circles.png') no-repeat top;
+        background-size: cover;
+        max-width: 565px;
+        width: 100%;
+        padding: 5rem 3rem;
+        margin-bottom: 2rem;
+    }
+
+    // .hero__h1
+
+    &__h1 {
+        font-family: $poppins;
+        font-weight: 600;
+        font-size: 5.2rem;
+        max-width: 405px;
+        line-height: 1.4;
+    }
+
+    // .hero__h5
+
+    &__h5 {
+        font-family: $poppins;
+        font-weight: 400;
+        font-size: 1.6rem;
+        margin: 2rem 0;
+    }
+
+    .header {
+        box-shadow: none;
+    }
+
+    .header__container {
+        justify-content: flex-start;
+    }
+
+    .header__link {
+        margin-right: 0;
+        margin-left: 3rem;
+    }
+}
+
+.hero-left {
+    width: 50%;
+}
+
+.hero-right {
+    width: 50%;
+
+}
+
+.header-alt {
+
+    &__container {
+        display: flex;
+        align-items: center;
+
+        padding: 1rem 2rem;
+    }
+
+
+    &__link {
+        margin-left: 3rem;
+        text-transform: capitalize;
+        transition: color .3s linear;
+
+        &:hover {
+            color: $accent;
+        }
+    }
+}
+
+.rating-box {
+    max-width: 665px;
+    width: 100%;
+    padding: 4rem 10rem;
+    background-color: #A175FF;
+    flex-basis: 48%;
+
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__active {
+        font-family: $poppins;
+        font-weight: 500;
+        font-size: 2.3rem;
+        color: #fff;
+        text-align: center;
+
+        span {
+            font-family: $poppins;
+            font-weight: 600;
+            font-size: 6rem;
+            color: #fff;
+            display: block;
+        }
+    }
+
+    &__rating {
+        font-family: $poppins;
+        font-weight: 500;
+        font-size: 2.3rem;
+        color: #fff;
+        text-align: center;
+
+        span {
+            font-family: $poppins;
+            font-weight: 600;
+            font-size: 6rem;
+            color: #fff;
+        }
+    }
+
+    &__ratings {
+        display: block;
+    }
+
+    &__body {
+        font-family: $poppins;
+        font-weight: 500;
+        font-size: 2rem;
+        color: rgba(255, 255, 255, 0.5);
+        line-height: 1.5;
+        text-align: center;
+        margin: 2rem 0 1rem;
+    }
+}
+
+.trust {
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem 0;
+
+    &__guide {
+        flex-basis: 45%;
+    }
+
+    &__list {
+        margin: 2rem 0 2rem 2.5rem;
+    }
+
+
+    &__item {
+        list-style: disc;
+        margin-top: 1rem;
+        font-family: $poppins;
+        font-weight: 400;
+        font-size: 2rem;
+    }
+}
+
+.skills {
+    margin: 6rem 0 3rem;
+
+    &__header {
+        display: flex;
+    }
+
+    &__h3 {
+        flex-basis: 53%;
+        font-family: $poppins;
+        font-weight: 600;
+        font-size: 4.8rem;
+        text-transform: capitalize;
+
+        span {
+            color: #FFA31A;
+        }
+    }
+
+
+    &__h4 {
+        flex-basis: 47%;
+        font-family: $poppins;
+        font-weight: 400;
+        font-size: 2.4rem;
+        margin-top: 7rem;
+        text-indent: 3rem;
+    }
+}
+
+.skills-slider {
+    max-width: 940px;
+    width: 100%;
+    background-color: #FFE0B3;
+    margin: 4rem auto;
+
+
+    &__slide {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    &__ellipse {
+        position: absolute;
+        bottom: -15%;
+        right: -8%;
+        z-index: -1;
+    }
+
+    &__ellipse2 {
+        position: absolute;
+        top: 15%;
+        left: -11%;
+        z-index: -1;
+    }
+
+    &__img {
+        flex-basis: 45%;
+    }
+
+    &__content {
+        flex-basis: 55%;
+        padding: 4.8rem 8rem;
+    }
+
+
+    &__h3 {
+        font-family: $poppins;
+        font-weight: 500;
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+
+
+    &__text {
+        font-family: $poppins;
+        font-weight: 400;
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+    }
+
+    &__enroll {
+        margin-top: 4rem;
+    }
+}
+
+.consultation {
+    margin: 6rem 0;
+
+    &__content {
+        display: flex;
+        margin: 3rem 0;
+    }
+
+    &__text {
+        max-width: 350px;
+        font-family: $poppins;
+        font-weight: 400;
+        font-size: 1.8rem;
+        margin-left: 3rem;
+    }
+}
+
+.quality {
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 4rem 0;
+    }
+
+    &__h3 {
+        font-family: $poppins;
+        font-weight: 600;
+        font-size: 5rem;
+        margin: 3rem 0;
+
+        span {
+            position: relative;
+            display: inline-block;
+            margin-right: 1rem;
+
+            &::after {
+                content: '';
+                height: 8px;
+                width: 100%;
+                background-color: $accent;
+                position: absolute;
+                bottom: 20%;
+                right: 0;
+                left: 0;
+                z-index: -1;
+            }
+        }
+    }
+}
+
+.quality-left {
+    flex-basis: 47%;
+}
+
+.quality-slider {
+    flex-basis: 52%;
+    max-width: 580px;
+    margin-right: auto;
+    align-self: center;
+
+    &__h4 {
+        font-family: $poppins;
+        font-weight: 600;
+        font-size: 3.2rem;
+        display: flex;
+        align-items: center;
+        margin: 2rem 0;
+
+        img {
+            margin-right: 2rem;
+        }
+    }
+
+
+    &__text {
+        font-family: $poppins;
+        font-weight: 400;
+        font-size: 2.2rem;
+        line-height: 1.6;
+    }
+}
+
+.popular {
+
+    &__h3 {
+        font-family: $poppins;
+        font-weight: 600;
+        font-size: 4.4rem;
+        text-align: center;
+    }
+
+
+    &__h5 {
+        font-family: $poppins;
+        font-weight: 400;
+        font-size: 2.4rem;
+        color: #00A7DB;
+        margin: 2rem 0 4rem;
+        text-align: center;
+    }
+
+    &__container {}
+
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        margin: 2rem 0;
+    }
+}
+
+.popular-card {
+    flex-basis: 31%;
+}
+
+.student {
+    margin: 3rem 0;
+
+    &__h3 {
+        font-family: $poppins;
+        font-weight: 600;
+        font-size: 5rem;
+
+        span {
+            color: #A175FF;
+        }
+    }
+
+    &__h5 {
+        font-family: $poppins;
+        font-weight: 400;
+        font-size: 2.8rem;
+        max-width: 985px;
+        margin: 2rem 0;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+
+    &__img {
+        flex-basis: 50%;
+        margin-top: 6rem;
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+
+    &__text {
+        flex-basis: 50%;
+        max-width: 625px;
+        padding: 2rem;
+        font-family: $poppins;
+        font-weight: 400;
+        font-size: 2.4rem;
+        align-self: center;
+        margin-top: 6rem;
+    }
+
+
+    &__h6 {
+        font-family: $poppins;
+        font-weight: 500;
+        font-size: 4.4rem;
+    }
+}
+
+.steps {
+    margin: 6rem 0 3rem;
+
+    &__h3 {
+        font-family: $poppins;
+        font-weight: 600;
+        font-size: 5rem;
+        text-transform: capitalize;
+        text-align: right;
+
+        span {
+            color: #FFA31A;
+        }
+    }
+
+    &__h6 {
+        font-family: $poppins;
+        font-weight: 400;
+        font-size: 2.6rem;
+        text-align: right;
+    }
+
+
+    &__content {
+        margin: 9rem 0 6rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        position: relative;
+    }
+}
+
+.curve-line {
+    position: absolute;
+    top: 5%;
+    left: 32%;
+    z-index: -1;
+}
+
+.steps-card {
+    max-width: 430px;
+    width: 100%;
+    padding: 3rem;
+    background-color: #FFE0B3;
+    border-radius: 2.4rem;
+    position: relative;
+    margin: 2rem 0 9rem;
+
+    &:nth-child(2) {
+        margin-top: 12rem;
+    }
+
+    &__content {
+        text-align: center;
+
+    }
+
+
+    &__h3 {
+        font-family: $poppins;
+        font-weight: 500;
+        font-size: 3rem;
+    }
+
+
+    &__text {
+        font-family: $poppins;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 1.5;
+    }
+
+    &__number {
+        position: absolute;
+        top: -50%;
+        left: -10%;
+        z-index: -1;
+
+        &--alt {
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            z-index: -1;
+        }
+
+        &:last-child {
+            left: -15%;
+        }
+    }
+}
+
+.review {
+
+
+    &__h3 {
+        font-family: $poppins;
+        font-weight: 600;
+        font-size: 4.6rem;
+        text-align: center;
+    }
+
+    &__h6 {
+        font-family: $poppins;
+        font-weight: 400;
+        font-size: 2.4rem;
+        color: #20DF4A;
+        text-align: center;
+    }
+
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 4rem 0;
+    }
+}
+
+
+.review-card {
+    flex-basis: 50%;
+    display: flex;
+    background-color: #A6F2B7;
+    padding-left: 2rem;
+
+    &__img {
+        align-self: flex-end;
+        margin-top: 2rem;
+        margin-bottom: -0.4rem;
+    }
+
+
+    &__info {
+        margin-top: 2rem;
+    }
+
+
+    &__prof {
+        max-width: 135px;
+        text-transform: uppercase;
+        font-family: $poppins;
+        font-weight: 500;
+        font-size: 2.2rem;
+        color: #236926;
+    }
+
+
+    &__name {
+        font-family: $poppins;
+        font-weight: 600;
+        font-size: 3.6rem;
+        margin: .3rem 0;
+        text-transform: capitalize;
+    }
+
+    &__exp {
+        max-width: 180px;
+        font-family: $poppins;
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 1.5;
+    }
+}
+
+.stories {
+
+
+    &__h3 {
+        font-family: $poppins;
+        font-weight: 600;
+        font-size: 5rem;
+        text-transform: capitalize;
+
+        .heading {
+            font-size: 5rem;
+
+            &::after {
+
+                background-color: #00BBF6;
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 4rem 0;
+    }
+}
+
+.stories-card {
+    flex-basis: 48%;
+    background-color: #DDF9FF;
+    padding: 2rem;
+    max-width: 630px;
+    width: 100%;
+    margin-top: 2rem;
+
+    &__name {
+        font-weight: 600;
+        color: #0087B1;
+        text-transform: uppercase;
+        font-size: 2.3rem;
+    }
+
+
+    &__prof {
+        font-weight: 400;
+        color: #00A7DB;
+        font-size: 2rem;
+        margin: 1rem 0;
+    }
+
+
+    &__text {
+        font-family: $poppins;
+        max-width: 530px;
+    }
+}
+
+.vacancy {
+    background: url('../img/main/vacancy-bg.png') no-repeat top center;
+    background-size: cover;
+    padding: 2rem;
+    min-height: 380px;
+
+    &__container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    &__content {
+        max-width: 670px;
+        width: 100%;
+        height: 100%;
+        margin-top: 3rem;
+    }
+
+
+    &__h3 {
+        font-family: $poppins;
+        font-size: 4rem;
+        color: #fff;
+    }
+
+    &__h6 {
+        font-family: $poppins;
+        font-size: 2rem;
+        font-weight: 400;
+        color: #fff;
+    }
+
+    &__input {
+        margin: 1.3rem 0;
+    }
+
+    &__sumbit {
+        .btn {
+            max-width: 375px;
+        }
+    }
+
+    &__phone {
+        background-color: #fff;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        max-width: 375px;
+
+        img {
+            margin-right: 2rem;
+        }
+    }
+}
+
+.input-text {
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-family: $poppins;
+    font-size: 1.6rem;
+
+    &:focus {
+        outline: none;
+    }
+
+
 }
