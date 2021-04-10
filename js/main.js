@@ -1,4 +1,5 @@
-// *************** Burger menu ***************  
+$(document).ready(function(){
+// *************** Burger menu ***************
 const menuBtn = document.querySelector('.burger');
 const miniHeader = document.querySelector('.mini-header');
 let menuOpen = false;
@@ -21,7 +22,6 @@ menuBtn.addEventListener('click', () => {
 
 
     $(window).on('scroll load resize', function(){
-        let headerH = header.innerHeight();
         scrollPos = $(this).scrollTop();
 
         if(scrollPos > 1){
@@ -30,3 +30,19 @@ menuBtn.addEventListener('click', () => {
           header.removeClass('fixed');
         }
     });
+
+
+
+    // Mini filter
+    const miniFilterGroup = document.querySelectorAll('.mini-filter__group');
+
+    miniFilterGroup.forEach(function (item) {
+        item.addEventListener('click', function () {
+        this.nextElementSibling.classList.toggle('active');
+    })
+    })
+    
+
+
+
+});

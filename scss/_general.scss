@@ -9,12 +9,14 @@
 html {
     font-size: 10px;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
     font-family: $inter;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: $black;
+    overflow-x: hidden;
 
     @media(max-width:$mobile-sm) {
         font-size: 1.6rem;
