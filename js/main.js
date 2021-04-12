@@ -1,4 +1,18 @@
-$(document).ready(function(){
+jQuery(document).ready(function ($) {
+    $('.skills-slider').slick({
+        dots: true,
+        arrows: false,
+        autoplay: true,
+        infinite: true,
+        autoplaySpeed: 5000
+    });
+    $('.quality-slider').slick({
+        dots: true,
+        arrows: false,
+        autoplay: true,
+        infinite: true,
+        autoplaySpeed: 5000
+    });
 // *************** Burger menu ***************
 const menuBtn = document.querySelector('.burger');
 const miniHeader = document.querySelector('.mini-header');
@@ -42,7 +56,6 @@ menuBtn.addEventListener('click', () => {
     })
     })
     
-
 
 
 });
