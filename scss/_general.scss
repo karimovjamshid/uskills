@@ -174,7 +174,8 @@ li {
         background-color: $blue;
         min-width: 200px;
         border-radius: 0;
-        color: $dark;
+        color: #fff;
+        text-transform: uppercase;
     }
 
     &--lightblue {

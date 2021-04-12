@@ -350,6 +350,7 @@
         font-family: $poppins;
         font-weight: 600;
         color: $white;
+        text-transform: uppercase;
     }
 
     &__bottom {
@@ -393,7 +394,7 @@
 
     &__icon {
         margin-right: 1rem;
-        border: 2px solid $blue;
+        background-color: #FFA31A;
         width: 40px;
         height: 40px;
         display: flex;
@@ -2137,12 +2138,54 @@
     }
 }
 
+.slick-dots {
+    display: flex;
+    position: absolute;
+    bottom: -8%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    li {
+        margin-right: 1rem;
+
+
+        button {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            border: none;
+            font-size: 0;
+            background-color: rgba(0, 0, 0, 0.15);
+            cursor: pointer;
+
+            &:focus {
+                outline: none;
+
+            }
+        }
+    }
+}
+
+.slick-active {
+    button {
+        background-color: #FFA31A !important;
+    }
+}
+
+
+
 .skills-slider {
     max-width: 940px;
     width: 100%;
     background-color: #FFE0B3;
     margin: 4rem auto;
+    position: relative;
 
+    &__wrapper {
+        &:focus {
+            outline: none;
+        }
+    }
 
     &__slide {
         display: flex;
@@ -2354,6 +2397,18 @@
     flex-basis: 51%;
     max-width: 580px;
     align-self: center;
+
+    &__slide {
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .slick-active {
+        button {
+            background-color: #73EB8E !important;
+        }
+    }
 
     @media(max-width: 670px) {
         flex-basis: 95%;

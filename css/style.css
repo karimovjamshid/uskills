@@ -141,7 +141,8 @@ li {
     background-color: #00BBF6;
     min-width: 200px;
     border-radius: 0;
-    color: #161616; }
+    color: #fff;
+    text-transform: uppercase; }
   .btn--lightblue {
     background-color: #DDF9FF;
     color: #00BBF6;
@@ -664,7 +665,8 @@ li {
     margin-bottom: 2rem;
     font-family: "Poppins", sans-serif;
     font-weight: 600;
-    color: #F7F7FC; }
+    color: #F7F7FC;
+    text-transform: uppercase; }
   .footer__bottom {
     display: -webkit-box;
     display: -webkit-flex;
@@ -718,7 +720,7 @@ li {
   display: flex; }
   .social__icon {
     margin-right: 1rem;
-    border: 2px solid #00BBF6;
+    background-color: #FFA31A;
     width: 40px;
     height: 40px;
     display: -webkit-box;
@@ -2462,11 +2464,41 @@ li {
       .skills__h4 {
         font-size: 2.2rem; } }
 
+.slick-dots {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: -8%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%); }
+  .slick-dots li {
+    margin-right: 1rem; }
+    .slick-dots li button {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      border: none;
+      font-size: 0;
+      background-color: rgba(0, 0, 0, 0.15);
+      cursor: pointer; }
+      .slick-dots li button:focus {
+        outline: none; }
+
+.slick-active button {
+  background-color: #FFA31A !important; }
+
 .skills-slider {
   max-width: 940px;
   width: 100%;
   background-color: #FFE0B3;
-  margin: 4rem auto; }
+  margin: 4rem auto;
+  position: relative; }
+  .skills-slider__wrapper:focus {
+    outline: none; }
   .skills-slider__slide {
     display: -webkit-box;
     display: -webkit-flex;
@@ -2695,6 +2727,10 @@ li {
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center; }
+  .quality-slider__slide:focus {
+    outline: none; }
+  .quality-slider .slick-active button {
+    background-color: #73EB8E !important; }
   @media (max-width: 670px) {
     .quality-slider {
       -webkit-flex-basis: 95%;
