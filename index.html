@@ -641,9 +641,25 @@
         </div>
     </footer>
 
-    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        $('.skills-slider').slick({
+            dots: true,
+            arrows: false,
+            autoplay: true,
+            infinite: true,
+            autoplaySpeed: 5000
+        });
+        $('.quality-slider').slick({
+            dots: true,
+            arrows: false,
+            autoplay: true,
+            infinite: true,
+            autoplaySpeed: 5000
+        });
+    </script>
 </body>
 
 </html>
