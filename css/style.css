@@ -317,10 +317,10 @@ li {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex; }
-    @media (max-width: 580px) {
+    @media (max-width: 700px) {
       .header__nav {
         display: none; } }
-  @media (max-width: 580px) {
+  @media (max-width: 700px) {
     .header__join {
       display: none; } }
   .header__link {
@@ -354,7 +354,7 @@ li {
   z-index: 3001; }
   .burger:focus {
     outline: none; }
-  @media (max-width: 580px) {
+  @media (max-width: 700px) {
     .burger {
       display: -webkit-box;
       display: -webkit-flex;
@@ -2650,6 +2650,9 @@ li {
         margin-top: 2rem;
         text-align: center; } }
 
+.quality .slick-dots {
+  bottom: -14%; }
+
 .quality__content {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2679,7 +2682,7 @@ li {
   font-weight: 600;
   font-size: 5rem;
   margin: 3rem 0; }
-  @media (max-width: 950px) {
+  @media (max-width: 1135px) {
     .quality__h3 {
       font-size: 4rem;
       text-align: center; } }
@@ -2707,13 +2710,14 @@ li {
 .quality-left {
   -webkit-flex-basis: 47%;
   -ms-flex-preferred-size: 47%;
-  flex-basis: 47%; }
+  flex-basis: 47%;
+  margin: 0 auto; }
   @media (max-width: 670px) {
     .quality-left {
       -webkit-flex-basis: 95%;
       -ms-flex-preferred-size: 95%;
       flex-basis: 95%;
-      margin-bottom: 2rem; } }
+      margin: 0 auto 2rem; } }
   .quality-left img {
     display: block;
     width: 100%;
@@ -2724,6 +2728,7 @@ li {
   -ms-flex-preferred-size: 51%;
   flex-basis: 51%;
   max-width: 580px;
+  margin: 0 auto;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center; }
@@ -2898,9 +2903,9 @@ li {
     margin-top: 6rem; }
     @media (max-width: 1000px) {
       .student__img {
-        -webkit-flex-basis: 95%;
-        -ms-flex-preferred-size: 95%;
-        flex-basis: 95%; } }
+        -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+        flex-basis: 100%; } }
     .student__img img {
       display: block;
       width: 100%;
@@ -2919,9 +2924,9 @@ li {
     margin-top: 6rem; }
     @media (max-width: 1000px) {
       .student__text {
-        -webkit-flex-basis: 95%;
-        -ms-flex-preferred-size: 95%;
-        flex-basis: 95%;
+        -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
         max-width: none;
         padding: 0;
         text-align: center; } }
@@ -3245,9 +3250,9 @@ li {
       padding: 1.5rem; } }
   @media (max-width: 700px) {
     .stories-card {
-      -webkit-flex-basis: 95%;
-      -ms-flex-preferred-size: 95%;
-      flex-basis: 95%;
+      -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
       margin-bottom: 2rem;
       text-align: center; } }
   .stories-card__name {

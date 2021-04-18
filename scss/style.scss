@@ -31,14 +31,14 @@
     &__nav {
         display: flex;
 
-        @media(max-width:$mobile-sm) {
+        @media(max-width:$mobile) {
             display: none;
         }
 
     }
 
     &__join {
-        @media(max-width:$mobile-sm) {
+        @media(max-width:$mobile) {
             display: none;
         }
     }
@@ -73,7 +73,7 @@
         outline: none;
     }
 
-    @media (max-width: $mobile-sm) {
+    @media (max-width: $mobile) {
         display: flex;
     }
 
@@ -2327,6 +2327,10 @@
 }
 
 .quality {
+    .slick-dots {
+        bottom: -14%;
+    }
+
     &__content {
         display: flex;
         justify-content: space-between;
@@ -2345,7 +2349,7 @@
         font-size: 5rem;
         margin: 3rem 0;
 
-        @media(max-width: 950px) {
+        @media(max-width: 1135px) {
             font-size: 4rem;
             text-align: center;
         }
@@ -2380,10 +2384,11 @@
 
 .quality-left {
     flex-basis: 47%;
+    margin: 0 auto;
 
     @media(max-width: 670px) {
         flex-basis: 95%;
-        margin-bottom: 2rem;
+        margin: 0 auto 2rem;
     }
 
     img {
@@ -2396,6 +2401,7 @@
 .quality-slider {
     flex-basis: 51%;
     max-width: 580px;
+    margin: 0 auto;
     align-self: center;
 
     &__slide {
@@ -2578,7 +2584,7 @@
         margin-top: 6rem;
 
         @media(max-width: 1000px) {
-            flex-basis: 95%;
+            flex-basis: 100%;
         }
 
         img {
@@ -2599,7 +2605,7 @@
         margin-top: 6rem;
 
         @media(max-width: 1000px) {
-            flex-basis: 95%;
+            flex-basis: 100%;
             max-width: none;
             padding: 0;
             text-align: center;
@@ -2991,7 +2997,7 @@
     }
 
     @media(max-width: $mobile) {
-        flex-basis: 95%;
+        flex-basis: 100%;
         margin-bottom: 2rem;
         text-align: center;
     }
