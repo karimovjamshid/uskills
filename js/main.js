@@ -42,6 +42,29 @@ menuBtn.addEventListener('click', () => {
         this.nextElementSibling.classList.toggle('active');
     })
     })
+
+    const coursesMinimenuGroup = document.querySelectorAll(".courses-minimenu__group");
+
+
+    coursesMinimenuGroup.forEach(function (item) {
+        item.addEventListener('click', function () {
+            this.nextElementSibling.classList.toggle('active');
+        })
+    })
+
+
+        // Smooth scroll
+        $("[data-scroll]").on('click', function(event){
+        event.preventDefault();
+
+        let elemID = $(this).data('scroll');
+        let elemOffSet = $(elemID).offset().top;
+
+        $('html, body').animate({
+            scrollTop: elemOffSet - 98
+        });
+
+});
     
 
 
