@@ -114,14 +114,16 @@ li {
         cursor: pointer;
     }
 
+    &:focus {
+        outline: none;
+    }
+
     img {
         margin-left: 0.5rem;
     }
 
 
-    &:focus {
-        outline: none;
-    }
+
 
     &--green {
         background-color: $accent;
@@ -189,6 +191,38 @@ li {
     }
 }
 
+.number-form {
+    position: relative;
+    display: flex;
+    box-shadow: $shadow-alt;
+}
+
+.number-input {
+    font-family: $poppins;
+    border: none;
+    max-width: 375px;
+    width: 100%;
+    padding: 1.1rem 2rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+    color: $dark;
+    z-index: 5;
+
+    &:focus {
+        outline: none;
+    }
+
+
+
+}
+
 .scroll-more {
     background-color: #CEF6FF;
     font-family: $poppins;
@@ -204,6 +238,7 @@ li {
     align-items: center;
     border-radius: 1.4em;
     position: relative;
+    overflow: hidden;
 
     img {
         margin-left: 0.5rem;
@@ -232,6 +267,25 @@ li {
         outline: none;
     }
 
+}
+
+.btn-mini {
+    font-family: $poppins;
+    border: none;
+    max-width: 70px;
+    width: 100%;
+    padding: 1.1rem 2rem;
+    font-size: 1.6rem;
+    color: $white;
+    font-weight: 400;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:focus {
+        outline: none;
+    }
 }
 
 .text {
@@ -268,13 +322,13 @@ li {
 
 .input-alt2 {
     width: 100%;
-    padding: 1.7rem 1.5rem;
+    padding: 1.2rem 1.5rem;
     border: none;
     font-family: $pt;
     font-weight: 400;
     background-color: rgba(196, 196, 196, 0.5);
     border-radius: 2rem;
-    font-size: 2.4rem;
+    font-size: 2rem;
 
     &:focus {
         outline: none;
@@ -282,6 +336,36 @@ li {
 
     @media(max-width: $laptop-lg) {
         font-size: 1.8rem;
+    }
+}
+
+.return {
+    margin: 3rem 0;
+
+    &__back {
+        color: $blue;
+        font-family: $poppins;
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+        margin-left: 4rem;
+    }
+
+
+    img {
+        margin-right: 0.7rem;
+    }
+
+    @media(max-width: 450px) {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    a {
+        @media(max-width: 450px) {
+            margin-left: 0;
+        }
     }
 }
 

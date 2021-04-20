@@ -61,7 +61,7 @@ menuBtn.addEventListener('click', () => {
         let elemOffSet = $(elemID).offset().top;
 
         $('html, body').animate({
-            scrollTop: elemOffSet - 98
+            scrollTop: elemOffSet - 150
         });
 
 });

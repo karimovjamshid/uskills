@@ -251,20 +251,15 @@
     flex-wrap: wrap;
     margin: 2rem 0;
 
-    @media(max-width:$mobile-sm) {
-        justify-content: center;
-    }
 
     &__group {
         margin-right: 2rem;
         display: flex;
         align-items: center;
+        margin-top: 1rem;
 
-        @media(max-width:505px) {
-            flex-basis: 52%;
-            margin: 0 auto 1rem;
-            display: flex;
-            justify-content: center;
+        @media(max-width:500px) {
+            margin: 1rem auto 0;
         }
     }
 
@@ -418,9 +413,10 @@
     margin-top: 1rem;
 
     @media(max-width:$mobile-xs) {
-        width: 55%;
+        width: 70%;
         margin: 1rem auto 0 auto;
     }
+
 
     &__icon {
         flex-basis: 10%;
@@ -436,7 +432,7 @@
         font-size: 1.6rem;
         font-family: $poppins;
         color: $white;
-        flex-basis: 90%;
+        flex-basis: 100%;
     }
 }
 
@@ -731,26 +727,36 @@
 
     &__name {
         margin-right: 2.5rem;
+
+        @media(max-width: 500px) {
+            margin-right: 1rem;
+        }
+
+        @media(max-width: 380px) {
+            margin-right: 0;
+        }
+    }
+
+    &__arrow {
+        margin-top: 0.5rem;
+
+        @media(max-width: 380px) {
+            display: none;
+        }
     }
 
     &__menu {
         max-width: 745px;
         width: 100%;
         background-color: $light-red;
-        margin-bottom: 1rem;
-        border-radius: 2rem;
 
         @media(max-width: 1120px) {
             flex-basis: 100%;
             margin-bottom: 2rem;
         }
 
-        @media(max-width: $mobile) {
-            display: none;
-        }
-    }
 
-    // .filter__list
+    }
 
     &__list {
         display: flex;
@@ -758,16 +764,14 @@
 
     }
 
-    // .filter__item
-
     &__item {
-        flex-basis: 25%;
-        font-size: 2.4rem;
+        flex-basis: 33%;
+        font-size: 1.8rem;
         font-weight: 400;
         color: $white;
         text-transform: capitalize;
         border-right: 1px solid #EF5D62;
-        padding: 1rem 0;
+        padding: .7rem 0;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -785,13 +789,25 @@
         span {
             background-color: #EF5D62;
             color: $white;
-            border-radius: 2rem;
-            padding: 1rem 3rem;
+            padding: .7rem 3rem;
             text-transform: lowercase;
+            cursor: pointer;
+
+            @media(max-width: 380px) {
+                padding: .7rem 1.5rem;
+            }
         }
 
         @media(max-width: $laptop-lg) {
             font-size: 1.8rem;
+        }
+
+        @media(max-width: 500px) {
+            font-size: 1.4rem;
+        }
+
+        @media(max-width: 290px) {
+            font-size: 1.3rem;
         }
     }
 
@@ -809,10 +825,9 @@
 .filter-dropdown {
     width: 100%;
     position: absolute;
-    top: 101%;
-    background-color: #EF5D62;
+    top: 103%;
+    background-color: $light-red;
     padding: 1.4rem;
-    border-radius: 1.5rem;
     opacity: 0;
     z-index: -1;
     transition: opacity .3s linear;
@@ -821,70 +836,24 @@
         font-size: 1.6rem;
         margin-bottom: 1.4rem;
         cursor: pointer;
+        transition: color .3s linear;
+
+        @media(max-width: 500px) {
+            font-size: 1.3rem;
+        }
+
+        @media(max-width: 290px) {
+            font-size: 1.2rem;
+        }
+
 
         &:last-child {
             margin: 0;
         }
-    }
-}
 
-.mini-filter {
-    display: none;
-    max-width: 350px;
-    width: 100%;
-    padding: 1rem;
-    width: 100%;
-    background-color: $light-red;
-    margin: 2rem 0;
-
-    @media(max-width: $mobile) {
-        display: block;
-    }
-
-    &__group {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 1rem;
-        cursor: pointer;
-    }
-
-    &__name {
-        flex-basis: 90%;
-        font-weight: 400;
-        font-size: 2rem;
-        color: #fff;
-        text-transform: capitalize;
-    }
-
-
-    &__icon {
-        flex-basis: 10%;
-    }
-
-    &__list {
-        margin: 1rem 0 1rem 2rem;
-        height: 0;
-        z-index: -2;
-        opacity: 0;
-        transition: all .3s linear;
-        visibility: hidden;
-        overflow-y: auto;
-
-        &.active {
-            z-index: 1;
-            opacity: 1;
-            height: 90px;
-            visibility: visible;
+        &:hover {
+            color: $accent;
         }
-    }
-
-    &__sub {
-        font-weight: 400;
-        color: #fff;
-        margin-bottom: 1.3rem;
-        text-transform: uppercase;
-        font-size: 1.4rem;
     }
 }
 
@@ -1069,22 +1038,19 @@
 }
 
 .courses-menu {
-
+    max-width: 450px;
+    width: 100%;
     display: flex;
+    justify-content: space-between;
     align-items: center;
 
     @media(max-width: 730px) {
-        width: 100%;
-        justify-content: center;
-    }
-
-    @media(max-width: 485px) {
-        display: none;
+        margin: 0 auto;
     }
 
     &__group {
         display: flex;
-
+        align-items: center;
 
 
     }
@@ -1092,23 +1058,35 @@
     &__item {
         display: flex;
         align-items: center;
-        margin-right: 2.5rem;
+        justify-content: center;
+        flex-basis: 32%;
         background-color: #CEF6FF;
-        padding: 1.2rem 2.7rem;
+        padding: 1.2rem 1rem;
         text-transform: capitalize;
         font-size: 1.6rem;
         position: relative;
         cursor: pointer;
+        border-right: 1px solid #00A7DB;
+
+
 
         &:hover .courses-dropdown {
             opacity: 1;
             z-index: 2;
+        }
+
+        &:last-child {
+            margin-right: 0;
         }
     }
 
 
     &__name {
         margin-right: 0.7rem;
+
+        @media(max-width: 380px) {
+            font-size: 1.4rem;
+        }
     }
 }
 
@@ -1709,6 +1687,7 @@
 
             @media(max-width: 580px) {
                 margin-left: 0;
+
             }
         }
     }
@@ -1723,6 +1702,12 @@
 
         @media(max-width: 680px) {
             font-size: 4rem;
+        }
+
+        @media(max-width: 580px) {
+            flex-basis: 100%;
+            text-align: center;
+
         }
 
         @media(max-width: 550px) {
@@ -1754,11 +1739,11 @@
         }
 
         .btn {
-            max-width: 190px;
-            font-size: 4.8rem;
+            max-width: 140px;
+            font-size: 2.4rem;
 
             @media(max-width: 680px) {
-                font-size: 4rem;
+                font-size: 2.2rem;
             }
         }
     }
@@ -1786,6 +1771,10 @@
         margin-left: 2rem;
         font-family: $poppins;
 
+        @media(max-width: $mobile) {
+            font-size: 1.4rem;
+
+        }
     }
 
     &__h4 {
@@ -1872,7 +1861,7 @@
     }
 
     &__container {
-        margin: 0;
+
 
         .scroll-more {
             margin-left: 3rem;
@@ -1958,7 +1947,7 @@
     .header__container {
         justify-content: flex-start;
 
-        @media(max-width: $mobile-sm) {
+        @media(max-width: $mobile) {
             justify-content: space-between;
         }
     }
@@ -2128,7 +2117,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 3rem 0;
+    margin: 10rem 0;
     padding: 0 1rem;
 
     @media(max-width: 1050px) {
@@ -2176,6 +2165,7 @@
         display: flex;
         flex-wrap: wrap;
         padding: 0 1rem;
+        margin: 10rem 0;
 
         @media(max-width: 1325px) {
             justify-content: center;
@@ -2188,6 +2178,7 @@
         font-weight: 600;
         font-size: 4.8rem;
         text-transform: capitalize;
+
 
         @media(max-width: 1325px) {
             flex-basis: 95%;
@@ -2230,13 +2221,17 @@
         @media(max-width: $laptop) {
             font-size: 2.2rem;
         }
+
+        @media(max-width: $tablet) {
+            font-size: 1.8rem;
+        }
     }
 }
 
 .slick-dots {
     display: flex;
     position: absolute;
-    bottom: -8%;
+    bottom: -10%;
     left: 50%;
     transform: translateX(-50%);
 
@@ -2379,7 +2374,16 @@
 .consultation {
     margin: 6rem 0;
 
+    @media(max-width: 960px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     h3 {
+        margin-top: 10rem;
+        margin-bottom: 1rem;
+
         @media(max-width: 950px) {
             display: flex;
             justify-content: center;
@@ -2422,16 +2426,18 @@
 }
 
 .quality {
+    padding: 7rem 0;
+
     .slick-dots {
         bottom: -14%;
+
+        @media(max-width: 810px) {
+            bottom: -8%;
+        }
     }
 
     &__content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        margin: 4rem 0;
+        margin: 7rem 0;
 
         @media(max-width: 670px) {
             justify-content: center;
@@ -2477,12 +2483,12 @@
     }
 }
 
-.quality-left {
+.quality-slider__img {
     flex-basis: 47%;
     margin: 0 auto;
 
-    @media(max-width: 670px) {
-        flex-basis: 95%;
+    @media(max-width: 810px) {
+        flex-basis: 100%;
         margin: 0 auto 2rem;
     }
 
@@ -2494,12 +2500,34 @@
 }
 
 .quality-slider {
-    flex-basis: 51%;
-    max-width: 580px;
-    margin: 0 auto;
-    align-self: center;
+    &__right {
+        flex-basis: 46%;
+        max-width: 580px;
+        margin: 0 auto;
+        align-self: center;
+        position: relative;
+
+        @media(max-width: 810px) {
+            flex-basis: 100%;
+            max-width: none;
+        }
+    }
+
+    &__wrapper {
+        &:focus {
+            outline: none;
+        }
+    }
 
     &__slide {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @media(max-width: 810px) {
+            justify-content: center;
+        }
+
         &:focus {
             outline: none;
         }
@@ -2511,17 +2539,18 @@
         }
     }
 
-    @media(max-width: 670px) {
-        flex-basis: 95%;
-    }
-
     &__h4 {
         font-family: $poppins;
         font-weight: 600;
-        font-size: 3.2rem;
+        font-size: 3rem;
         display: flex;
         align-items: center;
         margin: 2rem 0;
+
+        @media(max-width: 960px) {
+            font-size: 2.7rem;
+        }
+
 
         img {
             margin-right: 2rem;
@@ -2536,12 +2565,12 @@
             text-align: center;
         }
 
-        @media(max-width: 745px) {
-            font-size: 2.4rem;
+        @media(max-width: 810px) {
+            justify-content: center;
         }
 
-        @media(max-width: 670px) {
-            justify-content: center;
+        @media(max-width: 745px) {
+            font-size: 2.4rem;
         }
     }
 
@@ -2551,9 +2580,12 @@
         font-weight: 400;
         line-height: 1.6;
 
+        @media(max-width: 960px) {
+            font-size: 1.4rem;
+        }
+
         @media(max-width: 850px) {
             font-size: 1.4rem;
-            text-align: center;
         }
     }
 }
@@ -2571,7 +2603,7 @@
         }
 
         @media(max-width:640px) {
-            font-size: 2.6rem;
+            font-size: 2.8rem;
         }
     }
 
@@ -2585,11 +2617,11 @@
         text-align: center;
 
         @media(max-width: $tablet) {
-            font-size: 2.2rem;
+            font-size: 2rem;
         }
 
         @media(max-width:490px) {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
         }
     }
 
@@ -2598,7 +2630,7 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        margin: 2rem 0;
+        margin: 9rem 0;
 
         @media(max-width: 925px) {
             flex-basis: 48%;
@@ -2625,6 +2657,20 @@
     @media(max-width: $mobile-xs) {
         flex-basis: 100%;
     }
+}
+
+.swap1 {
+    @media(max-width: 880px) {
+        order: 2;
+    }
+
+}
+
+.swap1 {
+    @media(max-width: 880px) {
+        order: 1;
+    }
+
 }
 
 .student {
@@ -2656,9 +2702,13 @@
         max-width: 985px;
         margin: 2rem 0;
 
+        @media(max-width: 880px) {
+            text-align: center;
+        }
+
         @media(max-width:490px) {
             font-size: 1.8rem;
-            text-align: center;
+
         }
 
     }
@@ -2668,17 +2718,17 @@
         justify-content: space-between;
         flex-wrap: wrap;
 
-        @media(max-width: 1000px) {
+        @media(max-width: 880px) {
             justify-content: center;
         }
     }
 
 
     &__img {
-        flex-basis: 50%;
+        flex-basis: 48%;
         margin-top: 6rem;
 
-        @media(max-width: 1000px) {
+        @media(max-width: 880px) {
             flex-basis: 100%;
         }
 
@@ -2699,7 +2749,9 @@
         align-self: center;
         margin-top: 6rem;
 
-        @media(max-width: 1000px) {
+
+
+        @media(max-width: 880px) {
             flex-basis: 100%;
             max-width: none;
             padding: 0;
@@ -2726,6 +2778,18 @@
 .steps {
     margin: 6rem 0 3rem;
 
+    &__header {
+        margin: 16rem 0;
+
+        @media(max-width: 810px) {
+            margin: 10rem 0;
+        }
+
+        @media(max-width: 490px) {
+            margin: 5rem 0;
+        }
+    }
+
     &__h3 {
         font-family: $poppins;
         font-weight: 600;
@@ -2745,8 +2809,12 @@
             font-size: 4rem;
         }
 
+        @media(max-width: 740px) {
+            font-size: 2.8rem;
+        }
+
         @media(max-width:490px) {
-            font-size: 2.4rem;
+            font-size: 2.2rem;
         }
     }
 
@@ -2764,8 +2832,12 @@
             font-size: 2.2rem;
         }
 
-        @media(max-width:490px) {
+        @media(max-width: 740px) {
             font-size: 1.8rem;
+        }
+
+        @media(max-width: 490px) {
+            font-size: 1.6rem;
         }
     }
 
@@ -2874,6 +2946,10 @@
         font-family: $poppins;
         font-weight: 500;
         font-size: 3rem;
+
+        @media(max-width: 490px) {
+            font-size: 2.4rem;
+        }
     }
 
 
@@ -2882,6 +2958,10 @@
         font-weight: 400;
         font-size: 1.6rem;
         line-height: 1.5;
+
+        @media(max-width: 490px) {
+            font-size: 1.4rem;
+        }
     }
 
     &__number {
@@ -2912,7 +2992,7 @@
 }
 
 .review {
-
+    margin: 3rem 0;
 
     &__h3 {
         font-family: $poppins;
@@ -2941,7 +3021,7 @@
         }
 
         @media(max-width:490px) {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
         }
     }
 
@@ -2949,10 +3029,14 @@
     &__content {
         display: flex;
         flex-wrap: wrap;
-        margin: 4rem 0;
+        margin: 6rem 0 16rem;
 
         @media(max-width: 780px) {
             justify-content: center;
+        }
+
+        @media(max-width: 490px) {
+            margin: 6rem 0;
         }
     }
 }
@@ -3070,11 +3154,16 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        margin: 4rem 0;
+        margin: 8rem 0 14rem;
 
         @media(max-width: $mobile) {
             justify-content: center;
         }
+
+        @media(max-width: 490px) {
+            margin: 4rem 0 8rem;
+        }
+
     }
 }
 
