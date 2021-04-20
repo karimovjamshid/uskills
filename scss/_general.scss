@@ -240,6 +240,10 @@ li {
     position: relative;
     overflow: hidden;
 
+    @media(max-width:620px) {
+        display: none;
+    }
+
     img {
         margin-left: 0.5rem;
     }
