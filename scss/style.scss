@@ -1852,7 +1852,7 @@
     width: 100%;
     min-height: 100vh;
     padding: 0;
-    background: url('../img/main/hero-bg.png') no-repeat center;
+    background: url('../img/main/hero-bg-new.png') no-repeat center;
     background-size: cover;
 
     @media(max-width:620px) {
@@ -2284,7 +2284,7 @@
     &__slide {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-end;
         flex-wrap: wrap;
         position: relative;
 

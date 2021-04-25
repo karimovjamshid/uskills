@@ -2240,7 +2240,7 @@ li {
   width: 100%;
   min-height: 100vh;
   padding: 0;
-  background: url("../img/main/hero-bg.png") no-repeat center;
+  background: url("../img/main/hero-bg-new.png") no-repeat center;
   background-size: cover; }
   @media (max-width: 620px) {
     .hero {
@@ -2637,10 +2637,10 @@ li {
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
